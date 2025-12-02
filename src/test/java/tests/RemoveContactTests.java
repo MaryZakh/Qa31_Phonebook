@@ -1,7 +1,6 @@
 package tests;
 
 import models.User;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
