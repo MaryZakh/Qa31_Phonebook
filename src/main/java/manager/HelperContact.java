@@ -52,4 +52,26 @@ public class HelperContact extends HelperBase {
     public boolean isAddNewContactPageStillDisplayed() {
         return isElementPresent(By.cssSelector("a.active[href='/add']"));
     }
+
+
+    public int removeOneContact() {
+        int before = countOfContacts();
+        logger.info("Number of Contacts before remove is--->"+before);
+        removeContact();
+        int after = countOfContacts();
+        logger.info("Number of Contacts after remove is--->"+after);
+
+        return before - after;
+    }
+
+    private void removeContact() {
+        click(By.cssSelector(".contact-item_card__2SOIM"));
+        click(By.xpath("//button[text()='Remove']"));
+        pause(1000);
+    }
+
+    private int countOfContacts() {
+        return wd.findElements(By.cssSelector(".contact-item_card__2SOIM")).size();
+
+    }
 }
