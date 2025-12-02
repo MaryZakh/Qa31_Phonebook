@@ -14,7 +14,7 @@ public class RemoveContactTests extends TestBase {
                     .withPassword("Mmar123456$"));
         }
 
-      //  app.getHelperContact().provideContact();//if contact list size <3 ==> add 3 contacts
+        app.getHelperContact().provideContact();//if contact list size <3 ==> add 3 contacts
     }
 
 
@@ -26,6 +26,8 @@ public class RemoveContactTests extends TestBase {
 
     @Test
     public void removeAllContacts() {
+        app.getHelperContact().removeAllContacts();
         //Assert --> "No Contacts here!"
+        Assert.assertTrue(app.getHelperContact().isNoContactsHereDisplayed());
     }
 }
