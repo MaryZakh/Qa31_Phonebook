@@ -1,0 +1,38 @@
+20:49:43.030 INFO  manager.ApplicationManager - All tests runs i Chrome Browser
+20:49:44.080 INFO  manager.ApplicationManager - The link-->https://telranedu.web.app/home
+20:49:44.112 INFO  tests.TestBase - Name of method --->loginSuccess
+20:49:49.175 INFO  tests.TestBase - Start test with name 'Login Success'
+20:49:49.175 INFO  tests.TestBase - Test data ---> email: 'margo@gmail.com' & password: 'Mmar123456$'
+20:49:49.176 INFO  manager.WDListener - Before find elementBy.cssSelector: a[href='/login']
+20:49:49.206 INFO  manager.WDListener - After find elementBy.cssSelector: a[href='/login']
+20:49:49.218 INFO  manager.WDListener - Location of elementa
+20:49:49.239 INFO  manager.WDListener - Before click element --->atext = LOGIN
+20:49:49.324 INFO  manager.WDListener - After click element-->a
+20:49:49.324 INFO  manager.HelperBase - open form by click on button with locator By.cssSelector("a[href='/login']") 
+20:49:49.325 INFO  manager.WDListener - Before find elementBy.name: email
+20:49:49.357 INFO  manager.WDListener - After find elementBy.name: email
+20:49:49.364 INFO  manager.WDListener - Location of elementinput
+20:49:49.387 INFO  manager.WDListener - Before click element --->inputtext = 
+20:49:49.444 INFO  manager.WDListener - After click element-->input
+20:49:49.479 INFO  manager.WDListener - SendKeys-->input
+20:49:49.535 INFO  manager.WDListener - SendKeys-->input
+20:49:49.558 INFO  manager.WDListener - SendKeys-->input
+20:49:49.597 INFO  manager.HelperBase - type in input with locator By.name("email")
+20:49:49.597 INFO  manager.WDListener - Before find elementBy.xpath: //input[@placeholder='Pass']
+20:49:54.664 INFO  manager.WDListener - Huston, we have a problem!
+20:49:54.664 INFO  manager.WDListener - **********************
+20:49:54.665 INFO  manager.WDListener - Object target --->ChromeDriver: chrome on windows (cc4f69a4f83e5a9fd49f83b8d15bc8ef)
+20:49:54.665 INFO  manager.WDListener - **********************
+20:49:54.665 INFO  manager.WDListener - Method name--->findElement
+20:49:54.665 INFO  manager.WDListener - **********************
+20:49:54.666 INFO  manager.WDListener - InvocationTargetException-->org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Pass']"}
+  (Session info: chrome=142.0.7444.176)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.26.0', revision: '8ccf0219d7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cc4f69a4f83e5a9fd49f83b8d15bc8ef, findElement {value=//input[@placeholder='Pass'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 141.0.7390.65 (b2ec783d2b51..., userDataDir: C:\Users\marii\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65183}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65183/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cc4f69a4f83e5a9fd49f83b8d15bc8ef
+20:49:54.667 INFO  manager.WDListener - Screen with error is--->src/test/screenshots/screen_1275.png
+20:49:54.994 INFO  tests.TestBase - ================================================
