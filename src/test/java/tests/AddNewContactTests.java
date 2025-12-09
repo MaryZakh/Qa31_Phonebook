@@ -117,7 +117,7 @@ public class AddNewContactTests extends TestBase {
 
     @Test(dataProvider = "contactWrongPhone",dataProviderClass = DataProviderContacts.class)
     public void addNewContactWrongPhone(Contact contact) {
-        
+
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
         // app.getHelperContact().pause(15000);

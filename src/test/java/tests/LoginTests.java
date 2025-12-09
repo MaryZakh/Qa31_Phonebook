@@ -22,7 +22,7 @@ public class LoginTests extends TestBase {
         }
     }
 
-    @Test(dataProvider = "loginData",dataProviderClass = DataProviderUser.class)
+    @Test(dataProvider = "loginData", dataProviderClass = DataProviderUser.class)
     public void loginSuccess(String email, String password) {
         logger.info("Start test with name 'Login Success'");
         logger.info("Test data ---> email: " + email + "password: " + password);
@@ -39,7 +39,7 @@ public class LoginTests extends TestBase {
     }
 
 
-    @Test(dataProvider = "loginModel",dataProviderClass = DataProviderUser.class)
+    @Test(dataProvider = "loginModel", dataProviderClass = DataProviderUser.class)
     public void loginSuccessModel(User user) {
         logger.info("Test data ---> " + user.toString());
         app.getHelperUser().openLoginRegistrationForm();
@@ -50,6 +50,16 @@ public class LoginTests extends TestBase {
 //        Assert.assertNotEquals();
 //        Assert.assertTrue();
 //        Assert.assertFalse();
+        Assert.assertTrue(app.getHelperUser().isLogged());
+        logger.info("Assert check is element button 'Sign out' present");
+    }
+
+    @Test(dataProvider = "loginFile", dataProviderClass = DataProviderUser.class)
+    public void loginSuccessModelDPF(User user) {
+        logger.info("Test data ---> " + user.toString());
+        app.getHelperUser().openLoginRegistrationForm();
+        app.getHelperUser().fillLoginRegistrationForm(user);
+        app.getHelperUser().submitLogin();
         Assert.assertTrue(app.getHelperUser().isLogged());
         logger.info("Assert check is element button 'Sign out' present");
     }
