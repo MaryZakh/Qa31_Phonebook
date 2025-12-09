@@ -35,6 +35,21 @@ public class AddNewContactTests extends TestBase {
 
     }
 
+    @Test(dataProvider = "contactCSV", dataProviderClass = DataProviderContacts.class)
+
+    public void addContactSuccessAllFieldsCSV(Contact contact) {
+        int i = new Random().nextInt(1000) + 1000;
+
+        app.getHelperContact().openContactForm();
+        app.getHelperContact().fillContactForm(contact);
+        //app.getHelperContact().pause(15000);
+        app.getHelperContact().getScreen("src/test/screenshots/screen-" + i + ".png");
+        app.getHelperContact().saveContact();
+        Assert.assertTrue(app.getHelperContact().isContactAddedByName(contact.getName()));
+        Assert.assertTrue(app.getHelperContact().isContactAddedByPhone(contact.getPhone()));
+
+    }
+
     @Test
     public void addContactSuccessReqFields() {
         int i = new Random().nextInt(1000) + 1000;
