@@ -1,5 +1,7 @@
 package tests;
 
+import manager.DataProviderContacts;
+import manager.DataProviderUser;
 import models.Contact;
 import models.User;
 import org.testng.Assert;
@@ -18,18 +20,10 @@ public class AddNewContactTests extends TestBase {
         }
     }
 
-    @Test
-    public void addContactSuccessAllFields() {
-        int i = new Random().nextInt(1000) + 1000;
+    @Test(dataProvider = "contactSuccess", dataProviderClass = DataProviderContacts.class)
 
-        Contact contact = Contact.builder()
-                .name("Tony"+i)
-                .lastName("Molly")
-                .email("tony" + i + "@gmail.com")
-                .phone("34343434" + i)
-                .address("Haifa")
-                .description("all fields")
-                .build();
+    public void addContactSuccessAllFields(Contact contact) {
+        int i = new Random().nextInt(1000) + 1000;
 
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
@@ -55,7 +49,7 @@ public class AddNewContactTests extends TestBase {
 
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
-       // app.getHelperContact().pause(15000);
+        // app.getHelperContact().pause(15000);
         app.getHelperContact().saveContact();
 
         Assert.assertTrue(app.getHelperContact().isContactAddedByName(contact.getName()));
@@ -63,7 +57,7 @@ public class AddNewContactTests extends TestBase {
     }
 
     @Test
-    public void addNewContactWrongName(){
+    public void addNewContactWrongName() {
         Contact contact = Contact.builder()
                 .name("")
                 .lastName("Molly")
@@ -80,8 +74,9 @@ public class AddNewContactTests extends TestBase {
 
         Assert.assertTrue(app.getHelperContact().isAddNewContactPageStillDisplayed());
     }
+
     @Test
-    public void addNewContactWrongLastName(){
+    public void addNewContactWrongLastName() {
         Contact contact = Contact.builder()
                 .name("Tony")
                 .lastName("")
@@ -93,13 +88,14 @@ public class AddNewContactTests extends TestBase {
 
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
-       //app.getHelperContact().pause(15000);
+        //app.getHelperContact().pause(15000);
         app.getHelperContact().saveContact();
         Assert.assertTrue(app.getHelperContact().isAddNewContactPageStillDisplayed());
 
     }
+
     @Test
-    public void addNewContactWrongEmail(){
+    public void addNewContactWrongEmail() {
         Contact contact = Contact.builder()
                 .name("Tony")
                 .lastName("Molly")
@@ -119,20 +115,12 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test
-    public void addNewContactWrongPhone(){
-        Contact contact = Contact.builder()
-                .name("Tony")
-                .lastName("Molly")
-                .email("tony@gmail.com")
-                .phone("")
-                .address("Haifa")
-                .description("wrong phone")
-                .build();
-
+    @Test(dataProvider = "contactWrongPhone",dataProviderClass = DataProviderContacts.class)
+    public void addNewContactWrongPhone(Contact contact) {
+        
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
-       // app.getHelperContact().pause(15000);
+        // app.getHelperContact().pause(15000);
         app.getHelperContact().saveContact();
         Assert.assertTrue(app.getHelperContact().isAddNewContactPageStillDisplayed());
         Assert.assertTrue(app.getHelperUser().isAlertPresent(" Phone not valid: Phone number must contain only digits! And length min 10, max 15!"));
@@ -140,7 +128,7 @@ public class AddNewContactTests extends TestBase {
     }
 
     @Test
-    public void addNewContactWrongAddress(){
+    public void addNewContactWrongAddress() {
         Contact contact = Contact.builder()
                 .name("Tony")
                 .lastName("Molly")
