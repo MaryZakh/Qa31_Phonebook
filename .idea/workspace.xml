@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad238499-8efc-4fcf-96b2-fec947acc7c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log-251202Qa_31203227.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log-251202Qa_31204941.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log-251202Qa_31205408.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log-251205Qa_31091918.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log-251205Qa_31092559.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="ad238499-8efc-4fcf-96b2-fec947acc7c9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +72,7 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/manager/HelperContact.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/manager/TestNGListener.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/tests/LoginTests.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/tests/LoginTests.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -97,6 +89,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Gradle.AddNewContactTests.addContactSuccessAllFields.executor": "Run",
+    "Gradle.AddNewContactTests.addContactSuccessAllFieldsCSV.executor": "Run",
     "Gradle.AddNewContactTests.addNewContactWrongEmail.executor": "Run",
     "Gradle.AddNewContactTests.addNewContactWrongLastName.executor": "Run",
     "Gradle.AddNewContactTests.addNewContactWrongName.executor": "Run",
@@ -105,6 +98,7 @@
     "Gradle.LoginTests.executor": "Run",
     "Gradle.LoginTests.loginSuccess.executor": "Run",
     "Gradle.LoginTests.loginSuccessModel.executor": "Run",
+    "Gradle.LoginTests.loginSuccessModelDPF.executor": "Run",
     "Gradle.LoginTests.loginWrongEmail.executor": "Run",
     "Gradle.LoginTests.test.executor": "Run",
     "Gradle.RegistrationTests.executor": "Run",
@@ -119,11 +113,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Qa_31/Qa_31_IlCarro_new"
+    "last_opened_file_path": "C:/Users/marii/Downloads/Qa30_IlCarro_new",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.LoginTests.loginSuccess">
-    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Qa_31\Qa31_Phonebook\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.AddNewContactTests.addContactSuccessAllFieldsCSV">
+    <configuration name="AddNewContactTests.addContactSuccessAllFields" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +136,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.LoginTests&quot;" />
+            <option value="&quot;tests.AddNewContactTests.addContactSuccessAllFields&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +147,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.loginSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddNewContactTests.addContactSuccessAllFieldsCSV" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +160,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.LoginTests.loginSuccess&quot;" />
+            <option value="&quot;tests.AddNewContactTests.addContactSuccessAllFieldsCSV&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -171,7 +171,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.loginWrongEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddNewContactTests.addNewContactWrongPhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,7 +184,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.LoginTests.loginWrongEmail&quot;" />
+            <option value="&quot;tests.AddNewContactTests.addNewContactWrongPhone&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -195,7 +195,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RemoveContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.loginSuccessModel" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -208,7 +208,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.RemoveContactTests&quot;" />
+            <option value="&quot;tests.LoginTests.loginSuccessModel&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -219,7 +219,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RemoveContactTests.removeAllContacts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.loginSuccessModelDPF" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -232,7 +232,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.RemoveContactTests.removeAllContacts&quot;" />
+            <option value="&quot;tests.LoginTests.loginSuccessModelDPF&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,11 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginTests.loginSuccess" />
-        <item itemvalue="Gradle.LoginTests.loginWrongEmail" />
-        <item itemvalue="Gradle.LoginTests" />
-        <item itemvalue="Gradle.RemoveContactTests" />
-        <item itemvalue="Gradle.RemoveContactTests.removeAllContacts" />
+        <item itemvalue="Gradle.AddNewContactTests.addContactSuccessAllFieldsCSV" />
+        <item itemvalue="Gradle.LoginTests.loginSuccessModelDPF" />
+        <item itemvalue="Gradle.AddNewContactTests.addNewContactWrongPhone" />
+        <item itemvalue="Gradle.AddNewContactTests.addContactSuccessAllFields" />
+        <item itemvalue="Gradle.LoginTests.loginSuccessModel" />
       </list>
     </recent_temporary>
   </component>
