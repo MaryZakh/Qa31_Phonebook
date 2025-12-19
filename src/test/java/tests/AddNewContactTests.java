@@ -35,6 +35,8 @@ public class AddNewContactTests extends TestBase {
 
     }
 
+    //for jenkins
+
     @Test(dataProvider = "contactCSV", dataProviderClass = DataProviderContacts.class)
     public void addContactSuccessAllFieldsCSV(Contact contact) {
         int i = new Random().nextInt(1000) + 1000;
