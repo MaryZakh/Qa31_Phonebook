@@ -50,6 +50,13 @@ task qa(type: Test) {
         useTestNG(){
             suites 'src/test/resources/scoupe.xml'
         }
+
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser',
+
+                    "${browser}"
+
+        }
     }
 
 
