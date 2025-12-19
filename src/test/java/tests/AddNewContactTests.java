@@ -35,7 +35,7 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    //for jenkins
+    //for jenkins!!!
 
     @Test(dataProvider = "contactCSV", dataProviderClass = DataProviderContacts.class)
     public void addContactSuccessAllFieldsCSV(Contact contact) {
